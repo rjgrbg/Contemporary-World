@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Materials - Contemporary World SOCSCI1</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="logo-text">
+                    <div class="logo-title">LMS</div>
+                    <div class="logo-subtitle">Contemporary World</div>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="materials.html" class="nav-link active">Materials</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="search-nav">
+                <input type="text" placeholder="Search in site">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Materials Page Content -->
+    <section class="materials-page">
+        <div class="materials-container">
+            <h1 class="page-title">Course Materials</h1>
+            <p class="page-subtitle">Download lectures, documents, and resources for your learning journey</p>
+            
+            <div class="filter-tabs">
+                <button class="tab-btn active" data-filter="all">
+                    <i class="fas fa-th"></i> All Materials
+                </button>
+                <button class="tab-btn" data-filter="lecture">
+                    <i class="fas fa-chalkboard-teacher"></i> Lectures
+                </button>
+                <button class="tab-btn" data-filter="reading">
+                    <i class="fas fa-book"></i> Readings
+                </button>
+                <button class="tab-btn" data-filter="assignment">
+                    <i class="fas fa-clipboard-list"></i> Assignments
+                </button>
+            </div>
+
+            <div class="materials-list" id="materialsGrid">
+                <!-- Materials will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="footer-logo-text">
+                            <div class="footer-logo-title">LMS</div>
+                            <div class="footer-logo-subtitle">Contemporary World</div>
+                        </div>
+                    </div>
+                    <p>Empowering students with comprehensive learning resources and materials for understanding contemporary global issues.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Useful Links</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="materials.html">Materials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="materials.html">Course Materials</a></li>
+                        <li><a href="about.html">Syllabus</a></li>
+                        <li><a href="contact.html">FAQ</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Get In Touch</h3>
+                    <ul class="footer-contact-info">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>socsci1@university.edu</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Social Sciences Building<br>Room 301</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Contemporary World SOCSCI1. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="materials.js"></script>
+</body>
+</html>
