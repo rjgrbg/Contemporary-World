@@ -927,6 +927,82 @@ body {
     display: none !important;
 }
 
+/* Burger Menu Styles */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 0.35rem;
+    z-index: 1001;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+}
+
+.burger-menu span {
+    width: 20px;
+    height: 2.5px;
+    background: var(--text-dark);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    position: absolute;
+    display: block;
+}
+
+.burger-menu span:nth-child(1) {
+    top: 10px;
+}
+
+.burger-menu span:nth-child(2) {
+    top: 15px;
+}
+
+.burger-menu span:nth-child(3) {
+    top: 20px;
+}
+
+.burger-menu.active span:nth-child(1) {
+    top: 15px;
+    transform: rotate(45deg);
+}
+
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+    top: 15px;
+    transform: rotate(-45deg);
+}
+
+/* Mobile Menu Overlay */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.menu-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .menu-overlay {
+        top: 60px;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .about-detail {
@@ -944,21 +1020,631 @@ body {
 }
 
 @media (max-width: 768px) {
+    /* Show burger menu and hide search */
+    .burger-menu {
+        display: flex;
+    }
+    
+    .search-nav {
+        display: none !important;
+    }
+    
+    /* Mobile Navigation */
+    .navbar {
+        position: sticky;
+        top: 0;
+    }
+    
     .nav-menu {
-        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-height: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: max-height 0.3s ease, padding 0.3s ease;
+        z-index: 999;
+        justify-content: flex-start;
+        overflow: hidden;
+    }
+    
+    .nav-menu.active {
+        max-height: 400px;
+        padding: 1rem 0;
+    }
+    
+    .nav-menu li {
+        width: 100%;
+        border-bottom: 1px solid var(--border);
+    }
+    
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover {
+        background: rgba(26, 77, 46, 0.08);
+        color: var(--primary-green);
+    }
+    
+    .nav-link.active {
+        background: rgba(26, 77, 46, 0.12);
+        color: var(--primary-green);
+        font-weight: 600;
+    }
+    
+    /* Consistent mobile font sizes - MINIMIZED */
+    body {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+    
+    /* Compact Navigation */
+    .nav-container {
+        padding: 0.75rem 1rem;
+    }
+    
+    .logo-icon {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .logo-icon i {
+        font-size: 1rem;
+    }
+    
+    .logo-title {
+        font-size: 0.95rem;
+    }
+    
+    .logo-subtitle {
+        font-size: 0.55rem;
+    }
+    
+    /* Hero Section - Minimized */
+    .hero {
+        min-height: 70vh;
+        padding: 1.5rem 1rem;
     }
     
     .hero-title {
-        font-size: 2.25rem;
+        font-size: 1.5rem;
+        line-height: 1.3;
+        margin-bottom: 1rem;
     }
     
+    .hero-description {
+        font-size: 0.85rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+    }
+    
+    /* Page Headers - Minimized */
     .page-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
     }
     
+    .page-subtitle {
+        font-size: 0.85rem;
+        margin-bottom: 2rem;
+    }
+    
+    .section-header h2,
+    .about-text h2,
+    .about-hero-content h1,
+    .contact-hero h1,
+    .mission-container h2,
+    .outcomes-container h2,
+    .topics-container h2,
+    .instructor-container h2,
+    .cta-container h2,
+    .contact-info-container h2,
+    .form-container h2,
+    .faq-container h2,
+    .team-container h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .section-header p,
+    .about-text p,
+    .about-hero-content p,
+    .contact-hero p,
+    .section-subtitle,
+    .instructor-subtitle,
+    .outcomes-subtitle,
+    .topics-subtitle,
+    .faq-subtitle,
+    .cta-container p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+    
+    /* Card Titles - Minimized */
+    .feature-card h3,
+    .issue-content h3,
+    .mission-card h3,
+    .outcome-item h3,
+    .material-item-title,
+    .classwork-card h3,
+    .topic-card h3,
+    .faq-item h3,
+    .info-card h3,
+    .info-card-contact h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Card Text - Minimized */
+    .feature-card p,
+    .issue-content p,
+    .mission-card p,
+    .outcome-item p,
+    .material-item-description,
+    .classwork-card p,
+    .topic-card p,
+    .faq-item p,
+    .info-card p,
+    .info-card-contact p,
+    .about-main p,
+    .overview-content p,
+    .instructor-card p,
+    .member-bio {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+    
+    /* Buttons - Minimized */
+    .cta-button,
+    .secondary-button,
+    .download-btn-material,
+    .submit-btn {
+        font-size: 0.85rem;
+        padding: 0.75rem 1.5rem;
+    }
+    
+    /* Sections - Compact Padding */
+    .about-section,
+    .issues-section,
+    .mission-section,
+    .course-overview,
+    .learning-outcomes,
+    .topics-section,
+    .instructor-section,
+    .materials-page,
+    .contact-info-section,
+    .contact-form-section,
+    .faq-section,
+    .team-section {
+        padding: 2.5rem 1rem;
+    }
+    
+    .about-hero,
+    .contact-hero {
+        padding: 2.5rem 1rem;
+    }
+    
+    .about-text {
+        padding: 2.5rem 1rem;
+    }
+    
+    /* Cards - Minimized Padding & Spacing */
+    .feature-card,
+    .issue-card,
+    .mission-card,
+    .outcome-item,
+    .topic-card,
+    .material-item,
+    .classwork-card,
+    .faq-item,
+    .info-card-contact,
+    .instructor-card {
+        padding: 1.25rem;
+        border-radius: 8px;
+    }
+    
+    .features-grid,
+    .issues-grid,
+    .mission-grid,
+    .outcomes-grid,
+    .topics-grid,
     .materials-list,
     .classwork-grid,
-    .features-grid {
+    .faq-grid,
+    .contact-info-grid {
+        gap: 1rem;
+    }
+    
+    /* Icons - Minimized */
+    .feature-icon,
+    .mission-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .feature-icon i,
+    .mission-icon i {
+        font-size: 1.25rem;
+    }
+    
+    .material-item-icon,
+    .classwork-icon {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .info-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 0.75rem;
+    }
+    
+    .info-icon i {
+        font-size: 1.25rem;
+    }
+    
+    .topic-card i {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    /* Images - Minimized */
+    .issue-image {
+        height: 160px;
+    }
+    
+    .overview-image {
+        height: 250px;
+    }
+    
+    .instructor-image {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 1rem;
+    }
+    
+    .member-image {
+        margin-bottom: 0.75rem;
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .member-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    /* Stats - Minimized */
+    .overview-stats {
+        gap: 1rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
+    }
+    
+    .outcome-number {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    /* Meta Info - Minimized */
+    .material-item-meta,
+    .classwork-meta {
+        font-size: 0.75rem;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .meta-badge {
+        font-size: 0.7rem;
+        padding: 0.25rem 0.65rem;
+    }
+    
+    /* Forms - Minimized */
+    .contact-form {
+        padding: 1.5rem;
+    }
+    
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    .form-group label {
+        font-size: 0.85rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 0.7rem 0.85rem;
+        font-size: 0.85rem;
+    }
+    
+    .form-group textarea {
+        min-height: 100px;
+    }
+    
+    /* Footer - Minimized */
+    .footer {
+        padding: 2rem 0 0;
+    }
+    
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    
+    .footer-logo-icon {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .footer-logo-icon i {
+        font-size: 1.1rem;
+    }
+    
+    .footer-logo-title {
+        font-size: 1rem;
+    }
+    
+    .footer-logo-subtitle {
+        font-size: 0.6rem;
+    }
+    
+    .footer-about p,
+    .footer-links-list a,
+    .footer-contact-info li,
+    .footer-bottom p {
+        font-size: 0.8rem;
+    }
+    
+    .footer-section h3 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .footer-bottom {
+        padding: 1.25rem 1rem;
+    }
+    
+    /* Filter Tabs - Minimized */
+    .filter-tabs {
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .tab-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    /* Team Section - Minimized */
+    .team-member h3 {
+        font-size: 1rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    .member-role {
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .team-grid {
+        gap: 1rem;
+    }
+    
+    .member-social a {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+    
+    /* Contact Page - Extra Minimized */
+    .contact-hero {
+        padding: 2rem 1rem !important;
+    }
+    
+    .contact-hero h1 {
+        font-size: 1.5rem !important;
+        margin-bottom: 0.75rem;
+    }
+    
+    .contact-hero p {
+        font-size: 0.85rem !important;
+    }
+    
+    .contact-info-section,
+    .contact-form-section {
+        padding: 2rem 1rem !important;
+    }
+    
+    .contact-info-container h2,
+    .form-container h2 {
+        font-size: 1.5rem !important;
+        margin-bottom: 0.5rem;
+    }
+    
+    .info-card-contact {
+        padding: 1rem !important;
+    }
+    
+    .info-icon {
+        width: 35px !important;
+        height: 35px !important;
+        margin-bottom: 0.6rem;
+    }
+    
+    .info-icon i {
+        font-size: 1.1rem !important;
+    }
+    
+    .info-card-contact h3 {
+        font-size: 0.95rem !important;
+        margin-bottom: 0.4rem;
+    }
+    
+    .info-card-contact p {
+        font-size: 0.75rem !important;
+    }
+    
+    .contact-form {
+        padding: 1.25rem !important;
+        border-radius: 10px;
+    }
+    
+    .form-row {
+        gap: 1rem;
+    }
+    
+    .form-group {
+        margin-bottom: 0.875rem;
+    }
+    
+    .form-group label {
+        font-size: 0.8rem !important;
+        margin-bottom: 0.35rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 0.65rem 0.75rem !important;
+        font-size: 0.8rem !important;
+        border-radius: 6px;
+    }
+    
+    .form-group textarea {
+        min-height: 90px !important;
+    }
+    
+    .submit-btn {
+        padding: 0.7rem 1.25rem !important;
+        font-size: 0.85rem !important;
+        border-radius: 6px;
+    }
+    
+    /* FAQ Section - Minimized */
+    .faq-section {
+        padding: 2rem 1rem !important;
+    }
+    
+    .faq-item {
+        padding: 1rem !important;
+    }
+    
+    .faq-item h3 {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.5rem;
+    }
+    
+    .faq-item h3 i {
+        font-size: 0.85rem;
+    }
+    
+    .faq-item p {
+        font-size: 0.75rem !important;
+    }
+    
+    /* Team Section - Extra Minimized */
+    .team-section {
+        padding: 2rem 1rem !important;
+    }
+    
+    .team-container h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    .team-container .section-subtitle {
+        font-size: 0.85rem !important;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* About Page - Minimized */
+    .about-hero {
+        padding: 2rem 1rem !important;
+    }
+    
+    .about-hero-content h1 {
+        font-size: 1.5rem !important;
+    }
+    
+    .about-hero-content p {
+        font-size: 0.85rem !important;
+    }
+    
+    .mission-section,
+    .course-overview,
+    .learning-outcomes,
+    .topics-section,
+    .instructor-section {
+        padding: 2rem 1rem !important;
+    }
+    
+    .overview-stats {
+        gap: 0.75rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stat-number {
+        font-size: 1.75rem !important;
+    }
+    
+    .stat-label {
+        font-size: 0.75rem !important;
+    }
+    
+    /* Issues Section - Minimized */
+    .issues-section {
+        padding: 2.5rem 1rem !important;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-header::after {
+        width: 60px;
+        height: 3px;
+        bottom: -1rem;
+    }
+    
+    /* Grid adjustments */
+    .materials-list,
+    .classwork-grid,
+    .features-grid,
+    .issues-grid,
+    .mission-grid,
+    .outcomes-grid,
+    .topics-grid,
+    .faq-grid,
+    .contact-info-grid,
+    .team-grid {
         grid-template-columns: 1fr;
     }
     
