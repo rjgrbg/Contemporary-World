@@ -67,7 +67,7 @@ const materials = [
     },
     {
         id: 8,
-      title: Lesson 7: Global Population and Mobility",
+      title: "Lesson 7: Global Population and Mobility",
         description: "Comprehensive study of global population dynamics and human mobility",
         type: "lecture",
         fileName: "MODULE 7-Global-Population-and-Mobility.pptx",
