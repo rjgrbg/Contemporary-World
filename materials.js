@@ -12,7 +12,7 @@ const materials = [
         date: "December 6, 2025 at 09:20 PM"
     },
     {
-        id: 4,
+        id: 2,
         title: "Lesson 4: Theories of Globalization",
         description: "Exploring different theoretical perspectives on globalization",
         type: "lecture",
@@ -30,7 +30,7 @@ const materials = [
         date: "November 28, 2025 at 02:15 PM"
     },
     {
-        id: 2,
+        id: 4,
         title: "Lesson 2: Globalization Metaphor",
         description: "Understanding globalization through metaphors and analogies",
         type: "lecture",
