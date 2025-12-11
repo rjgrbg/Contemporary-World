@@ -13,7 +13,7 @@ const materials = [
     },
     {
         id: 2,
-        title: "Lesson 2: Theories of Globalization",
+        title: "Lesson 4: Theories of Globalization",
         description: "Exploring different theoretical perspectives on globalization",
         type: "lecture",
         fileName: "u-LESSON4-THEORIES OF GLOBALIZATION.pptx",
