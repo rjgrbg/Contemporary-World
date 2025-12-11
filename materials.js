@@ -13,7 +13,7 @@ const materials = [
     },
     {
         id: 2,
-        title: "Lesson 4: Theories of Globalization",
+        title: "Lesson 2: Theories of Globalization",
         description: "Exploring different theoretical perspectives on globalization",
         type: "lecture",
         fileName: "u-LESSON4-THEORIES OF GLOBALIZATION.pptx",
@@ -57,7 +57,7 @@ const materials = [
         date: "November 20, 2025 at 10:30 AM"
     },
     {
-        id: 8,
+        id: 7,
         title: "Lesson 7-B: Demographic, Migration & Urbanization",
         description: "Understanding global demographic trends, migration patterns, and urbanization",
         type: "lecture",
@@ -66,7 +66,7 @@ const materials = [
         date: "November 18, 2025 at 02:45 PM"
     },
     {
-        id: 7,
+        id: 8,
       title: Lesson 7: Global Population and Mobility",
         description: "Comprehensive study of global population dynamics and human mobility",
         type: "lecture",
