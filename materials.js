@@ -4,7 +4,7 @@
 const materials = [
     {
         id: 1,
-        title: "Introduction to Globalization",
+        title: "Lesson 1: Introduction to Globalization",
         description: "Comprehensive introduction to globalization concepts and theories",
         type: "lecture",
         fileName: "INTRO-TO-GLOBALIZATION.pptx",
@@ -12,7 +12,7 @@ const materials = [
         date: "December 6, 2025 at 09:20 PM"
     },
     {
-        id: 2,
+        id: 4,
         title: "Lesson 4: Theories of Globalization",
         description: "Exploring different theoretical perspectives on globalization",
         type: "lecture",
@@ -30,8 +30,8 @@ const materials = [
         date: "November 28, 2025 at 02:15 PM"
     },
     {
-        id: 4,
-        title: "Globalization Metaphor",
+        id: 2,
+        title: "Lesson 2: Globalization Metaphor",
         description: "Understanding globalization through metaphors and analogies",
         type: "lecture",
         fileName: "FOR UPLOADGLOBALIZATION-METAPHOR-2.pptx",
@@ -49,7 +49,7 @@ const materials = [
     },
     {
         id: 6,
-        title: "Northern and Southern Countries",
+        title: "Lesson 6: Northern and Southern Countries",
         description: "Analysis of global north-south divide and development disparities",
         type: "lecture",
         fileName: "NORTHERN-AND-SOUTHERN-COUNTRIES.pptx",
@@ -57,7 +57,7 @@ const materials = [
         date: "November 20, 2025 at 10:30 AM"
     },
     {
-        id: 7,
+        id: 8,
         title: "Lesson 7-B: Demographic, Migration & Urbanization",
         description: "Understanding global demographic trends, migration patterns, and urbanization",
         type: "lecture",
@@ -66,8 +66,8 @@ const materials = [
         date: "November 18, 2025 at 02:45 PM"
     },
     {
-        id: 8,
-        title: "Module 7: Global Population and Mobility",
+        id: 7,
+      title: Lesson 7: Global Population and Mobility",
         description: "Comprehensive study of global population dynamics and human mobility",
         type: "lecture",
         fileName: "MODULE 7-Global-Population-and-Mobility.pptx",
@@ -121,7 +121,7 @@ const materials = [
     },
     {
         id: 14,
-        title: "Activity TWC - November 20, 2025",
+        title: "Activity TWC",
         description: "Class activity and exercises for The World Contemporary",
         type: "assignment",
         fileName: "ACTIVITY TWC 11_20_2025.docx",
