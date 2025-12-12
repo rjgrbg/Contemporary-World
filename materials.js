@@ -3,6 +3,15 @@
 
 const materials = [
     {
+        id: 0,
+        title: "Contemporary World Syllabus 2025",
+        description: "Complete course syllabus and requirements for 2025",
+        type: "reading",
+        fileName: "CONTEMPORARY WORLD SYLLABUS 2025.doc",
+        filePath: "files/CONTEMPORARY WORLD SYLLABUS 2025.doc",
+        date: "September 1, 2025 at 08:00 AM"
+    },
+    {
         id: 1,
         title: "Lesson 1: Introduction to Globalization",
         description: "Comprehensive introduction to globalization concepts and theories",
@@ -13,12 +22,12 @@ const materials = [
     },
     {
         id: 2,
-        title: "Lesson 4: Theories of Globalization",
-        description: "Exploring different theoretical perspectives on globalization",
+        title: "Lesson 2: Globalization Metaphor",
+        description: "Understanding globalization through metaphors and analogies",
         type: "lecture",
-        fileName: "u-LESSON4-THEORIES OF GLOBALIZATION.pptx",
-        filePath: "files/u-LESSON4-THEORIES OF GLOBALIZATION.pptx",
-        date: "December 4, 2025 at 04:22 PM"
+        fileName: "FOR UPLOADGLOBALIZATION-METAPHOR-2.pptx",
+        filePath: "files/FOR UPLOADGLOBALIZATION-METAPHOR-2.pptx",
+        date: "November 25, 2025 at 03:30 PM"
     },
     {
         id: 3,
@@ -31,16 +40,16 @@ const materials = [
     },
     {
         id: 4,
-        title: "Lesson 2: Globalization Metaphor",
-        description: "Understanding globalization through metaphors and analogies",
+        title: "Lesson 4: Theories of Globalization",
+        description: "Exploring different theoretical perspectives on globalization",
         type: "lecture",
-        fileName: "FOR UPLOADGLOBALIZATION-METAPHOR-2.pptx",
-        filePath: "files/FOR UPLOADGLOBALIZATION-METAPHOR-2.pptx",
-        date: "November 25, 2025 at 03:30 PM"
+        fileName: "u-LESSON4-THEORIES OF GLOBALIZATION.pptx",
+        filePath: "files/u-LESSON4-THEORIES OF GLOBALIZATION.pptx",
+        date: "December 4, 2025 at 04:22 PM"
     },
     {
         id: 5,
-        title: "Module 5: Global Inequality",
+        title: "Lesson 5: Global Inequality",
         description: "Examining global inequality with focus on Latin America and ASEAN regions",
         type: "lecture",
         fileName: "for uploadMODULE 5-GLOBAL-INEQUALITY-LATIN-AMERICA-ASEAN.pptx",
@@ -58,21 +67,21 @@ const materials = [
     },
     {
         id: 7,
+        title: "Lesson 7: Global Population and Mobility",
+        description: "Comprehensive study of global population dynamics and human mobility",
+        type: "lecture",
+        fileName: "MODULE 7-Global-Population-and-Mobility.pptx",
+        filePath: "files/MODULE 7-Global-Population-and-Mobility.pptx",
+        date: "November 15, 2025 at 11:00 AM"
+    },
+    {
+        id: 8,
         title: "Lesson 7-B: Demographic, Migration & Urbanization",
         description: "Understanding global demographic trends, migration patterns, and urbanization",
         type: "lecture",
         fileName: "Lesson 7-B_Demographic_Migration_Urbanization.pptx",
         filePath: "files/Lesson 7-B_Demographic_Migration_Urbanization.pptx",
         date: "November 18, 2025 at 02:45 PM"
-    },
-    {
-        id: 8,
-      title: "Lesson 7: Global Population and Mobility",
-        description: "Comprehensive study of global population dynamics and human mobility",
-        type: "lecture",
-        fileName: "MODULE 7-Global-Population-and-Mobility.pptx",
-        filePath: "files/MODULE 7-Global-Population-and-Mobility.pptx",
-        date: "November 15, 2025 at 11:00 AM"
     },
     {
         id: 9,
@@ -85,6 +94,15 @@ const materials = [
     },
     {
         id: 10,
+        title: "Quiz: Lesson 8 - Asian Regionalism",
+        description: "Assessment quiz for Lesson 8 on Asian Regionalism",
+        type: "assignment",
+        fileName: "QUIZ-LESSON8- ASIAN REGIONALISM.pdf",
+        filePath: "files/QUIZ-LESSON8- ASIAN REGIONALISM.pdf",
+        date: "November 8, 2025 at 10:00 AM"
+    },
+    {
+        id: 11,
         title: "Lesson 16: Globalization & Pandemic",
         description: "Impact of global pandemics on globalization processes",
         type: "reading",
@@ -93,35 +111,17 @@ const materials = [
         date: "November 10, 2025 at 03:00 PM"
     },
     {
-        id: 11,
-        title: "Quiz: Asian Regionalism",
-        description: "Assessment quiz for Lesson 8 on Asian Regionalism",
-        type: "reading",
-        fileName: "QUIZ-LESSON8- ASIAN REGIONALISM.pdf",
-        filePath: "files/QUIZ-LESSON8- ASIAN REGIONALISM.pdf",
-        date: "November 8, 2025 at 10:00 AM"
-    },
-    {
         id: 12,
-        title: "Presentation Materials",
-        description: "Additional presentation resources and materials",
-        type: "reading",
-        fileName: "Presentation1.pdf",
-        filePath: "files/Presentation1.pdf",
-        date: "November 5, 2025 at 02:15 PM"
+        title: "Assignment: TWC September",
+        description: "The World Contemporary assignment for September",
+        type: "assignment",
+        fileName: "TWC-Sept.docx",
+        filePath: "files/TWC-Sept.docx",
+        date: "September 15, 2025 at 04:30 PM"
     },
     {
         id: 13,
-        title: "Contemporary World Syllabus 2025",
-        description: "Complete course syllabus and requirements for 2025",
-        type: "reading",
-        fileName: "CONTEMPORARY WORLD SYLLABUS 2025.doc",
-        filePath: "files/CONTEMPORARY WORLD SYLLABUS 2025.doc",
-        date: "September 1, 2025 at 08:00 AM"
-    },
-    {
-        id: 14,
-        title: "Activity TWC",
+        title: "Activity: TWC - November 20, 2025",
         description: "Class activity and exercises for The World Contemporary",
         type: "assignment",
         fileName: "ACTIVITY TWC 11_20_2025.docx",
@@ -129,13 +129,13 @@ const materials = [
         date: "November 20, 2025 at 01:00 PM"
     },
     {
-        id: 15,
-        title: "TWC September Assignment",
-        description: "The World Contemporary assignment for September",
-        type: "assignment",
-        fileName: "TWC-Sept.docx",
-        filePath: "files/TWC-Sept.docx",
-        date: "September 15, 2025 at 04:30 PM"
+        id: 14,
+        title: "Presentation Materials",
+        description: "Additional presentation resources and materials",
+        type: "reading",
+        fileName: "Presentation1.pdf",
+        filePath: "files/Presentation1.pdf",
+        date: "November 5, 2025 at 02:15 PM"
     }
 ];
 
