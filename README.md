@@ -1,53 +1,64 @@
 # Contemporary World SOCSCI1 - Learning Management System
 
-A modern, clean static website LMS for downloading course materials including PowerPoint presentations, documents, and other educational resources.
+A Node.js/Express-based Learning Management System for downloading course materials including PowerPoint presentations, documents, and other educational resources.
 
 ## 🎯 Features
 
-- 📚 Multiple pages: Home, About, Classwork, Materials
+- 📚 Multiple pages: Home, About, Materials, Contact
 - 📥 Real file downloads (PPTX, PDF, DOCX)
 - 🎨 Clean, modern UI design
 - 📱 Fully responsive
 - 🔍 Material filtering by type
 - ⚡ Fast and lightweight
+- 🚀 Express.js server
 
-## 🚀 Quick Start
+## 📁 Project Structure
 
-### 1. Download/Clone this project
-
-### 2. Add your files
-Create a `files` folder and add your materials:
 ```
-your-website/
-├── files/
-│   ├── your-presentation.pptx
-│   ├── your-document.pdf
-│   └── your-assignment.docx
+├── server.js              # Express server
+├── package.json           # Node.js dependencies
+├── public/               # Static files served by Express
+│   ├── index.html        # Homepage
+│   ├── about.html        # About page
+│   ├── materials.html    # Materials download page
+│   ├── contact.html      # Contact page
+│   ├── styles.css        # All styling
+│   ├── script.js         # Main JavaScript
+│   ├── materials.js      # Materials data & logic
+│   ├── contact.js        # Contact form logic
+│   ├── hero-slideshow.js # Homepage slideshow
+│   ├── about-slideshow.js # About page slideshow
+│   └── images/           # Image assets
+└── files/                # Course materials (PPTX, PDF, DOCX)
 ```
 
-### 3. Open with a local server
-**Don't open HTML files directly!** Use a local server:
+## 🚀 Installation
 
-**Python:**
+1. **Install Node.js** (if not already installed)
+   - Download from [nodejs.org](https://nodejs.org/)
+
+2. **Install dependencies:**
 ```bash
-python -m http.server 8000
+npm install
 ```
 
-**Node.js:**
+## 🏃 Running the Application
+
+### Development Mode (with auto-restart):
 ```bash
-npx http-server
+npm run dev
 ```
 
-**VS Code:**
-- Install "Live Server" extension
-- Right-click `index.html` → "Open with Live Server"
+### Production Mode:
+```bash
+npm start
+```
 
-### 4. Visit in browser
-Open `http://localhost:8000` (or the port shown)
+The application will run on **http://localhost:3000**
 
 ## 📝 Adding Your Materials
 
-Edit `materials.js` and update the materials array:
+Edit `public/materials.js` and update the materials array:
 
 ```javascript
 {
@@ -61,74 +72,38 @@ Edit `materials.js` and update the materials array:
 }
 ```
 
-## 📁 File Structure
-
-```
-/
-├── index.html              # Homepage
-├── materials.html          # Materials download page
-├── classwork.html          # Classwork page
-├── about.html              # About page
-├── styles.css              # All styling
-├── materials.js            # Materials data & logic
-├── files/                  # Your PPTX, PDF, DOCX files
-│   ├── *.pptx
-│   ├── *.pdf
-│   └── *.docx
-├── README.md
-└── HOW-TO-ADD-FILES.md    # Detailed guide
-```
-
 ## 🌐 Deployment
 
-### GitHub Pages (Free)
-1. Create a GitHub repository
-2. Upload all files
-3. Settings → Pages → Enable
-4. Visit: `https://yourusername.github.io/repo-name`
+### Heroku
+```bash
+heroku create
+git push heroku main
+```
 
-### Netlify (Easiest)
-1. Go to netlify.com
-2. Drag & drop your folder
-3. Done! Instant live site
+### Render / Railway
+- Connect your GitHub repository
+- Set build command: `npm install`
+- Set start command: `npm start`
 
-### Vercel
-1. Go to vercel.com
-2. Import project
-3. Deploy
-
-## 📚 For Large Files
-
-If your PPTX files are large (>10MB), use cloud storage:
-
-**Google Drive:**
-1. Upload file → Share → Anyone with link
-2. Get file ID from URL
-3. Use: `https://drive.google.com/uc?export=download&id=FILE_ID`
+### VPS (DigitalOcean, AWS, etc.)
+```bash
+npm install
+npm start
+```
 
 ## 🎨 Customization
 
-**Colors:** Edit CSS variables in `styles.css`:
+**Colors:** Edit CSS variables in `public/styles.css`:
 ```css
 :root {
     --primary-dark: #3d4b6e;
     --accent-red: #e63946;
-    /* etc. */
 }
 ```
 
-**Materials:** Update `materials.js`
+**Materials:** Update `public/materials.js`
 
-**Layout:** Modify HTML files
-
-## 📖 Need Help?
-
-See `HOW-TO-ADD-FILES.md` for detailed instructions on:
-- Setting up local servers
-- Adding real files
-- Deploying online
-- Using cloud storage
-- Troubleshooting
+**Layout:** Modify HTML files in `public/`
 
 ## 📄 License
 
